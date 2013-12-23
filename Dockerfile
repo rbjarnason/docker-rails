@@ -15,7 +15,6 @@ RUN apt-get -yqq install curl libpq-dev
 RUN \curl -sSL https://get.rvm.io | bash -s stable
 RUN su root -c 'source /usr/local/rvm/scripts/rvm && rvm install $APP_RUBY_VERSION --default'
 
-ADD setup /opt/setup
 ADD start_passenger /opt/start_passenger
 ADD supervisor.conf /etc/supervisor/conf.d/rails.conf
 
