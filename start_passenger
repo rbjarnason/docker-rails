@@ -4,6 +4,4 @@ set -e
 
 source /usr/local/rvm/scripts/rvm
 cd /var/www/$APP_NAME/current
-bundle install
-gem install passenger
-supervisorctl start passenger
+passenger start -p 80 -e $RAILS_ENV
