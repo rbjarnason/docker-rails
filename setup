@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+source /usr/local/rvm/scripts/rvm
+cd /var/www/app
+bundle install
