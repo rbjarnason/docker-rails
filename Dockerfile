@@ -7,6 +7,8 @@ ENV DEBIAN_FRONTEND noninteractive
 
 ENV APP_RUBY_VERSION 2.0.0
 ENV RAILS_ENV production
+ENV DB_USERNAME docker
+ENV DB_PASSWORD docker
 
 RUN apt-get -qq update
 RUN apt-get -yqq upgrade
