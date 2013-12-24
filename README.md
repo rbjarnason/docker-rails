@@ -5,7 +5,7 @@ A simple Docker Image for running Ruby on Rails Rails applications with Passenge
 
 ## Starting The Container
 
-`docker run -d -link <dbcontainer>:db -v /var/www/<dir>:/var/www/<dir> -e APP_NAME=<appname> zumbrunnen/rails`
+`docker run -d -name <containername> -link <dbcontainer>:db -v /var/www/<dir>:/var/www/<dir> -e APP_NAME=<appname> zumbrunnen/rails`
 
 When the container starts, the necessary gems will be installed, then the DB will be prepared (created and migrated), and eventually, Passenger will be started in standalone mode. See [the start script](../master/start_passenger) which will be triggered by `supervisord`.
 
@@ -57,11 +57,12 @@ I use Apache2. Here's how to set it up:
         Order deny,allow
         Allow from all
     </Proxy>
-
 </VirtualHost>
 ```
 
-3. Enable the modules `proxy` and `proxy_http`: 
+N.B.: You can get the container's IP address by using: `docker inspect -format '{{ .NetworkSettings.IPAddress }}' <containername>`
+
+3. Enable the modules `proxy` and `proxy_http`:
 
 ```
 sudo a2enmod proxy
