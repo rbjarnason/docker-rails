@@ -3,6 +3,9 @@ docker-rails
 
 A simple Docker Image for running Ruby on Rails Rails applications with Passenger.
 
+## Starting a Your Priorities container
+docker run -d -name rtest1 -link postgresql:db -v /var/www/your-priorities:/var/www/your-priorities -e APP_NAME=your-priorities yrpri/rails
+
 ## Starting The Container
 
 `docker run -d -name <containername> -link <dbcontainer>:db -v /var/www/<dir>:/var/www/<dir> -e APP_NAME=<appname> zumbrunnen/rails`
