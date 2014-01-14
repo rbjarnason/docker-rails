@@ -12,7 +12,7 @@ ENV DB_PASSWORD docker
 
 RUN apt-get -qq update
 RUN apt-get -yqq upgrade
-RUN apt-get -yqq install curl libpq-dev
+RUN apt-get -yqq install curl libpq-dev libxslt-dev libxml2-dev libmysqlclient-dev libmagickwand-dev 
 
 RUN \curl -sSL https://get.rvm.io | bash -s stable
 RUN su root -c 'source /usr/local/rvm/scripts/rvm && rvm install $APP_RUBY_VERSION --default'
