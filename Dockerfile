@@ -20,6 +20,6 @@ RUN su root -c 'source /usr/local/rvm/scripts/rvm && rvm install $APP_RUBY_VERSI
 ADD start_passenger /opt/start_passenger
 ADD supervisor.conf /etc/supervisor/conf.d/rails.conf
 
-EXPOSE 80
+EXPOSE 3000
 
 CMD ["/usr/bin/supervisord"]
