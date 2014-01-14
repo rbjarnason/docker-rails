@@ -9,12 +9,8 @@ gem install json -v '1.8.1'
 
 bundle install
 
-if ! gem spec passenger > /dev/null 2>&1; then 
-  gem install passenger
-fi
-
 bundle exec rake db:create
 bundle exec rake db:schema:load
 bundle exec rake db:seed
 
-passenger start -p 80 -e $RAILS_ENV
+rails s Puma -e development -p 3000
