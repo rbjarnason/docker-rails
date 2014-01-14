@@ -1,6 +1,6 @@
 # Rails Application
 
-FROM yrpri/docker-base
+FROM yrpri/base
 MAINTAINER Robert Bjarnason <robert@citizens.is>
 
 ENV DEBIAN_FRONTEND noninteractive
