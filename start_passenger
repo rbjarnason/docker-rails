@@ -11,6 +11,7 @@ if ! gem spec passenger > /dev/null 2>&1; then
 fi
 
 bundle exec rake db:create
-bundle exec rake db:migrate
+bundle exec rake db:schema:load
+bundle exec rake db:seed
 
 passenger start -p 80 -e $RAILS_ENV
