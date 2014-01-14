@@ -4,13 +4,14 @@ set -e
 
 source /usr/local/rvm/scripts/rvm
 cd /var/www/$APP_NAME
+
+gem install json -v '1.8.1'
+
 bundle install
 
 if ! gem spec passenger > /dev/null 2>&1; then 
   gem install passenger
 fi
-
-gem install json -v '1.8.1'
 
 bundle exec rake db:create
 bundle exec rake db:schema:load
