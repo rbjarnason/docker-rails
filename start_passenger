@@ -7,7 +7,7 @@ cd /var/www/$APP_NAME
 
 gem install json -v '1.8.1'
 
-bundle install RAILS_ENV=development
+bundle install
 
 bundle exec rake db:create RAILS_ENV=development
 bundle exec rake db:schema:load RAILS_ENV=development
