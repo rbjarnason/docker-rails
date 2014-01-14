@@ -1,11 +1,11 @@
 # Rails Application
 
-FROM zumbrunnen/base
-MAINTAINER David Zumbrunnen <zumbrunnen@gmail.com>
+FROM yrpri/base
+MAINTAINER Robert Bjarnason <robert@citizens.is>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ENV APP_RUBY_VERSION 2.0.0
+ENV APP_RUBY_VERSION 2.1.0
 ENV RAILS_ENV production
 ENV DB_USERNAME docker
 ENV DB_PASSWORD docker
