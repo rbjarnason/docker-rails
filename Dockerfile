@@ -5,7 +5,7 @@ MAINTAINER Robert Bjarnason <robert@citizens.is>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ENV APP_RUBY_VERSION 2.1.0
+ENV APP_RUBY_VERSION 2.0.0
 ENV RAILS_ENV development
 ENV DB_USERNAME docker
 ENV DB_PASSWORD docker
