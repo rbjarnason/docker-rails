@@ -10,6 +10,8 @@ ENV RAILS_ENV development
 ENV DB_USERNAME docker
 ENV DB_PASSWORD docker
 
+RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+
 RUN apt-get -qq update
 RUN apt-get -yqq upgrade
 RUN apt-get -yqq install curl git libpq-dev libxslt-dev libxml2-dev libmysqlclient-dev libmagickwand-dev imagemagick
