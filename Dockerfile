@@ -1,4 +1,4 @@
-# Rails Application
+# Rails Application V2
 
 FROM yrpri/base
 MAINTAINER Robert Bjarnason <robert@citizens.is>
